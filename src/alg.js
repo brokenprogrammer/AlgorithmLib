@@ -25,4 +25,20 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 * THE SOFTWARE.
 */
-console.log("Hello Alg.js");
+"use strict";
+
+var algJS;
+(function (algJS) {
+    var Test = (function (){
+        function Test (){
+        }
+        Test.printVal = function(value){
+            console.log(value);
+            return value;
+        }
+        return Test;
+    }());
+    algJS.Test = Test;
+})(algJS || (algJS = {}));
+
+console.log(algJS.Test.printVal("Hello AlgJS"));

@@ -27,4 +27,5 @@
 */
 QUnit.test( "Equal", function( assert ) {
     assert.ok( 1 == "1", "Passed!" );
+    assert.equal(algJS.Test.printVal("Hello"), "Hello", "Library is working.");
 });

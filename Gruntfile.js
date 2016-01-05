@@ -26,8 +26,28 @@
 * THE SOFTWARE.
 */
 module.exports = function(grunt) {
+    // Project configuration.
+    grunt.initConfig({
+        uglify: {
+            options: {
+                sourceMap: true,
+                sourceMapName: 'build/alg.js.map',
+                mangle: false
+            },
+            my_target: {
+                files: {
+                    'build/alg.min.js': ['src/alg.js']
+                }
+            }
+        }
+    });
+
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
     // A very basic default task.
     grunt.registerTask('default', 'Log some stuff.', function() {
         grunt.log.write('Logging some stuff...').ok();
     });
+
+    grunt.registerTask('build', ['uglify']);
 };

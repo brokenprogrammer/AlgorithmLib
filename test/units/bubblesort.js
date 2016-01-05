@@ -25,24 +25,6 @@
 * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 * THE SOFTWARE.
 */
-"use strict";
-
-var algJS;
-(function (algJS) {
-    var Test = (function () {
-        function Test () {
-        }
-        Test.printVal = function(value) {
-            return value;
-        }
-        return Test;
-    }());
-    algJS.Test = Test;
-    var BubbleSort = (function () {
-        function BubbleSort(value) {
-            return value;
-        }
-        return BubbleSort;
-    }());
-    algJS.BubbleSort = BubbleSort;
-})(algJS || (algJS = {}));
+QUnit.test( "BubbleSort", function( assert ) {
+    assert.equal(algJS.BubbleSort("Sort"), "Sort", "Function is working!");
+});

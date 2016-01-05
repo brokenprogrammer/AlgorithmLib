@@ -40,9 +40,28 @@ var algJS;
     algJS.Test = Test;
     var BubbleSort = (function () {
         function BubbleSort(value) {
+            var redo = true;
+            var times = value.length;
+
+            while (redo) {
+                redo = false;
+                times -= 1;
+                for (var x = 0; x <= times; x++) {
+                    var switchTemp;
+                    if (value[x] > value[x+1]) {
+                        redo = true;
+                        switchTemp = value[x+1];
+                        value[x+1] = value[x];
+                        value[x] = switchTemp;
+                    }
+                }
+            }
             return value;
         }
         return BubbleSort;
     }());
     algJS.BubbleSort = BubbleSort;
 })(algJS || (algJS = {}));
+
+var sorting = [6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9];
+console.log(algJS.BubbleSort(sorting));

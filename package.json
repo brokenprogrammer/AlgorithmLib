@@ -1,0 +1,28 @@
+{
+  "name": "alg.js",
+  "version": "1.0.0",
+  "description": "The JavaScript library to provide solutions for tasks like sorting, searching and math algorithms.",
+  "main": "alg.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brokenprogrammer/alg.js.git"
+  },
+  "keywords": [
+    "algorithms"
+  ],
+  "author": "Oskar Mendel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/brokenprogrammer/alg.js/issues"
+  },
+  "homepage": "https://github.com/brokenprogrammer/alg.js#readme",
+  "devDependencies": {
+    "grunt": "^0.4.5"
+  }
+}

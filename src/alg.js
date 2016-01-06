@@ -38,27 +38,10 @@ var algJS;
         return Test;
     }());
     algJS.Test = Test;
-    var BubbleSort = (function () {
-        function BubbleSort(value) {
-            var redo = true;
-            var times = value.length;
-
-            while (redo) {
-                redo = false;
-                times -= 1;
-                for (var x = 0; x <= times; x++) {
-                    var switchTemp;
-                    if (value[x] > value[x+1]) {
-                        redo = true;
-                        switchTemp = value[x+1];
-                        value[x+1] = value[x];
-                        value[x] = switchTemp;
-                    }
-                }
-            }
-            return value;
+    var Sort = (function () {
+        function Sort() {
         }
-        BubbleSort.Nested = function(value) {
+        Sort.BubbleSort = function (value) {
             var redo = true;
             var switchTemp;
             var size = value.length;
@@ -76,7 +59,10 @@ var algJS;
             }
             return value;
         }
-        return BubbleSort;
+        Sort.QuickSortLomuto = function (value) {
+            return value;
+        }
+        return Sort;
     }());
-    algJS.BubbleSort = BubbleSort;
+    algJS.Sort = Sort;
 })(algJS || (algJS = {}));

@@ -28,9 +28,9 @@
 QUnit.test( 'BubbleSort', function( assert ) {
     var sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 32, 64, 74, 99, 103];
     var sorting = [6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9];
-    assert.equal(algJS.BubbleSort('Sort'), 'Sort', 'Function is working!');
+    assert.equal(algJS.Sort.BubbleSort('Sort'), 'Sort', 'Function is working!');
 
-    var finishedSort = algJS.BubbleSort(sorting);
+    var finishedSort = algJS.Sort.BubbleSort(sorting);
     var success = true;
     for (var x = 0; x <= finishedSort.length; x++) {
         if (sorted[x] == finishedSort[x]){
@@ -43,22 +43,11 @@ QUnit.test( 'BubbleSort', function( assert ) {
 
     console.time('Sort Normal');
     for (var x = 0; x <= 10000; x++) {
-        algJS.BubbleSort(sorting);
+        algJS.Sort.BubbleSort(sorting);
         if (x == 10000) {
             assert.equal(x, 10000, 'Sorted 10.000 times.');
         }
     }
     console.timeEnd('Sort Normal');
-
-    console.time('Sort Nested');
-    for (var x = 0; x <= 10000; x++) {
-        algJS.BubbleSort.Nested(sorting);
-        if (x == 10000) {
-            assert.equal(x, 10000, 'Sorted using nested loop 10.000 times.');
-        }
-    }
-    console.timeEnd('Sort Nested');
-
-    console.log(algJS.BubbleSort(sorting));
-    console.log(algJS.BubbleSort.Nested(sorting));
+    console.log(algJS.Sort.BubbleSort(sorting));
 });

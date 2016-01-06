@@ -62,6 +62,3 @@ var algJS;
     }());
     algJS.BubbleSort = BubbleSort;
 })(algJS || (algJS = {}));
-
-var sorting = [6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9];
-console.log(algJS.BubbleSort(sorting));

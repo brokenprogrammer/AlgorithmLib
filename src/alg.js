@@ -58,6 +58,24 @@ var algJS;
             }
             return value;
         }
+        BubbleSort.Nested = function(value) {
+            var redo = true;
+            var switchTemp;
+            var size = value.length;
+
+            for (var x = size; redo; x-- ) {
+                redo = false;
+                for (var y = 0; y <= x; y++) {
+                    if (value[y] > value[y+1]) {
+                        redo = true;
+                        switchTemp = value[y+1];
+                        value[y+1] = value[y];
+                        value[y] = switchTemp;
+                    }
+                }
+            }
+            return value;
+        }
         return BubbleSort;
     }());
     algJS.BubbleSort = BubbleSort;

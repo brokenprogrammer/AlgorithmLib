@@ -42,6 +42,9 @@ var algJS;
         function Sort() {
         }
         Sort.BubbleSort = function (value) {
+            if (typeof value != 'object') {
+                throw new TypeError('Value is not an array that can be sorted.');
+            }
             var redo = true;
             var switchTemp;
             var size = value.length;

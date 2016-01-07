@@ -28,7 +28,7 @@
 QUnit.test( 'BubbleSort', function( assert ) {
     var sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 32, 64, 74, 99, 103];
     var sorting = [6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9];
-    assert.equal(algJS.Sort.BubbleSort('Sort'), 'Sort', 'Function is working!');
+    //assert.equal(algJS.Sort.BubbleSort('Sort'), 'Sort', 'Function is working!');
 
     var finishedSort = algJS.Sort.BubbleSort(sorting);
     var success = true;
@@ -50,4 +50,10 @@ QUnit.test( 'BubbleSort', function( assert ) {
     }
     console.timeEnd('Sort Normal');
     console.log(algJS.Sort.BubbleSort(sorting));
+
+    assert.throws(function() {
+        algJS.Sort.BubbleSort('Invalid Input')},
+        new TypeError('Value is not an array that can be sorted.'),
+        'Error on invalid input.'
+    );
 });

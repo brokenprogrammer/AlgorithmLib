@@ -26,6 +26,8 @@
 * THE SOFTWARE.
 */
 
-QUnit.test('QuickSort', function (assert) {
+QUnit.test('EuclideansAlgorithm', function (assert) {
     assert.equal(1, 1, "True");
+
+    assert.equal(algJS.Mathematics.EuclideansAlgorithm(252, 105), 21, "Greatest Common Divisor of 252 and 105 is 21.");
 });

@@ -41,8 +41,12 @@ var algJS;
     var Mathematics = (function () {
         function Mathematics () {
         }
-        Mathematics.EuclideansAlgorithm = function (value1, value2) {
-            return value1;
+        Mathematics.EuclideansAlgorithm = function (p, q) {
+            if (q == 0) {
+                return p;
+            }
+            var remainder = p % q;
+            return Mathematics.EuclideansAlgorithm(q, remainder);
         }
         return Mathematics;
     }());

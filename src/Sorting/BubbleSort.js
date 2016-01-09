@@ -26,6 +26,16 @@
 * THE SOFTWARE.
 */
 
+/**
+ * BubbleSort sorts an array by repeatedly looping through an array by stepping
+ * through each value comparing the adjacent values and swaps the values if they
+ * are in wrong order. This keeps looping through untill no swaps is made and then
+ * the sorting is complete. Its called bubble sort because its bubbling the values
+ * up the array.
+ *
+ * @param value - An array of integers to be sorted.
+ * @return a sorted array. 
+ */
 function BubbleSort(value) {
     if (typeof value != 'object') {
         throw new TypeError('Value is not an array that can be sorted.');

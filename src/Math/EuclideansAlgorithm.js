@@ -26,6 +26,12 @@
 * THE SOFTWARE.
 */
 
-QUnit.test('QuickSort', function (assert) {
-    assert.equal(1, 1, "True");
-});
+function EuclideansAlgorithm(value1, value2) {
+    if (value2 == 0) {
+        return value1;
+    }
+    var remainder = value1 % value2;
+    return EuclideansAlgorithm(value2, remainder);
+}
+
+console.log(EuclideansAlgorithm(252, 105));

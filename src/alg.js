@@ -38,6 +38,15 @@ var algJS;
         return Test;
     }());
     algJS.Test = Test;
+    var Mathematics = (function () {
+        function Mathematics () {
+        }
+        Mathematics.EuclideansAlgorithm = function (value1, value2) {
+            return value1;
+        }
+        return Mathematics;
+    }());
+    algJS.Mathematics = Mathematics;
     var Sort = (function () {
         function Sort() {
         }

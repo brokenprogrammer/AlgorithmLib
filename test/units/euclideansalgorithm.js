@@ -30,4 +30,7 @@ QUnit.test('EuclideansAlgorithm', function (assert) {
     assert.equal(1, 1, "True");
 
     assert.equal(algJS.Mathematics.EuclideansAlgorithm(252, 105), 21, "Greatest Common Divisor of 252 and 105 is 21.");
+    assert.equal(algJS.Mathematics.EuclideansAlgorithm(54, 24), 6, 'Greatest Common Divisor of 54 and 24 is 6');
+    assert.equal(algJS.Mathematics.EuclideansAlgorithm(30, 12), 6, 'Greatest Common Divisor of 30 and 12 is 6');
+    assert.equal(algJS.Mathematics.EuclideansAlgorithm(4, 6), 2, 'Greatest Common Divisor of 4 and 6 is 2');
 });

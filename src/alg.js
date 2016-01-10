@@ -51,6 +51,14 @@ var algJS;
         return Mathematics;
     }());
     algJS.Mathematics = Mathematics;
+    var Search = (function () {
+        function Search() {
+        }
+        Search.BinarySearch = function (key, array) {
+
+        }
+    }());
+    algJS.Search = Search;
     var Sort = (function () {
         function Sort() {
         }

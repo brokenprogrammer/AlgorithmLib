@@ -31,11 +31,11 @@ QUnit.test('BinarySearch', function (assert) {
 
     var sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 32, 64, 74, 99, 103];
 
-    assert.equal(algJS.Search.BinarySearch(5, sorted), 5, 'Found the value 5.');
-    assert.equal(algJS.Search.BinarySearch(99, sorted), 99, 'Found the value 99.');
-    assert.equal(algJS.Search.BinarySearch(32, sorted), 32, 'Found the value 32.');
+    assert.equal(algJS.Search.BinarySearch(5, sorted), 4, 'Found the value 5 at position 4.');
+    assert.equal(algJS.Search.BinarySearch(99, sorted), 14, 'Found the value 99 at position 14.');
+    assert.equal(algJS.Search.BinarySearch(32, sorted), 11, 'Found the value 32 at position 11.');
 
-    assert.equal(algJS.Search.BinarySearch(11, sorted), 'Value not found!', 'Didnt find value 11.');
-    assert.equal(algJS.Search.BinarySearch(55, sorted), 'Value not found!', 'Didnt find value 55.');
-    assert.equal(algJS.Search.BinarySearch(1000, sorted), 'Value not found!', 'Didnt find value 1000.');
+    assert.equal(algJS.Search.BinarySearch(11, sorted), 'Failed to find value.', 'Didnt find value 11.');
+    assert.equal(algJS.Search.BinarySearch(55, sorted), 'Failed to find value.', 'Didnt find value 55.');
+    assert.equal(algJS.Search.BinarySearch(1000, sorted), 'Failed to find value.', 'Didnt find value 1000.');
 });

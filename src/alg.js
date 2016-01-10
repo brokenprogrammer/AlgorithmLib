@@ -55,21 +55,23 @@ var algJS;
         function Search () {
         }
         Search.BinarySearch = function (key, array) {
-            var lo = array[0];
-            var mid = array[array.length/2];
-            var hi = array[array.length-1];
+            var lo = 0;
+            var hi = array.length-1;
+            var mid;
 
-            if (mid == key) {
-                return mid;
-            } else if (array.length == 1) {
-                return 'Value not found!';
+            while (lo <= hi) {
+                mid = lo + (hi - lo) / 2;
+                mid = Math.floor(mid);
+                if (key < array[mid]) {
+                    hi = mid - 1;
+                } else if (key > array[mid]) {
+                    lo = mid + 1;
+                } else {
+                    return mid;
+                }
             }
 
-            if (key < mid) {
-                return Search.BinarySearch(key, array.slice(0, array.length/2));
-            } else if (key > mid) {
-                return Search.BinarySearch(key, array.slice(array.length/2, array.length));
-            }
+            return 'Failed to find value.';
         }
         return Search;
     }());

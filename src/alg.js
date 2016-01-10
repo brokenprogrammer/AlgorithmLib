@@ -52,11 +52,26 @@ var algJS;
     }());
     algJS.Mathematics = Mathematics;
     var Search = (function () {
-        function Search() {
+        function Search () {
         }
         Search.BinarySearch = function (key, array) {
+            var lo = array[0];
+            var mid = array[array.length/2];
+            var hi = array[array.length-1];
 
+            if (mid == key) {
+                return mid;
+            } else if (array.length == 1) {
+                return 'Value not found!';
+            }
+
+            if (key < mid) {
+                return Search.BinarySearch(key, array.slice(0, array.length/2));
+            } else if (key > mid) {
+                return Search.BinarySearch(key, array.slice(array.length/2, array.length));
+            }
         }
+        return Search;
     }());
     algJS.Search = Search;
     var Sort = (function () {

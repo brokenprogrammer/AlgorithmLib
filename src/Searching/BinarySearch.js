@@ -44,13 +44,46 @@ function BinarySearchFind(key, array) {
     if (mid == key) {
         return mid;
     } else if (array.length == 1) {
-        return "Value not found!";
+        return 'Value not found!';
     }
 
     if (key < mid) {
         return BinarySearch(key, array.slice(0, array.length/2));
     } else if (key > mid) {
         return BinarySearch(key, array.slice(array.length/2, array.length));
+    }
+}
+
+/**
+ * BinarySearchRecursive is searching with BinarySearch using an recursive function.
+ * This function needs to take the high and low through the parameters for it to work
+ * recursive. The function starts looking if the array is too short comparing max and min.
+ * Then the function moves on creating a mid variable just like the normal BinarySearch.
+ * What happends after is that we use the mid value to check if the key value is on the left
+ * or the right side of the mid value. That way we can return a call to the same function
+ * always checking the new mid value.
+ *
+ * @param key - the key value to look for in the array
+ * @param array - the array to look for the value inside
+ * @param min - the minimum index for the search
+ * @param max - the maximum index for the search
+ *
+ * @return returns the position of the key value or a string if the search failed.
+ */
+function BinarySearchRecursive(key, array, min, max) {
+    if (max < min) {
+        return 'Value not found!';
+    } else {
+        var mid = min + (max - min) / 2;
+        mid = Math.floor(mid);
+
+        if (key < array[mid]) {
+            return BinarySearchRecursive(key, array, min, mid-1);
+        } else if (key > array[mid]) {
+            return BinarySearchRecursive(key, array, mid+1, max);
+        } else {
+            return mid;
+        }
     }
 }
 
@@ -85,12 +118,18 @@ function BinarySearch(key, array) {
 }
 
 var sorted = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22, 32, 64, 74, 99, 103];
-//Searching for values
+//Using Binary search
+console.log('Searching with normal Binary Search: ');
 console.log(BinarySearch(5, sorted));
 console.log(BinarySearch(99, sorted));
 console.log(BinarySearch(32, sorted));
-
 //Searching for value not existing.
 console.log(BinarySearch(11, sorted));
 console.log(BinarySearch(55, sorted));
 console.log(BinarySearch(1000, sorted));
+
+//Using recursive Binary search
+console.log('Searching with recursive Binary Search: ');
+console.log(BinarySearchRecursive(5, sorted, 0, sorted.length));
+console.log(BinarySearchRecursive(99, sorted, 0, sorted.length));
+console.log(BinarySearchRecursive(32, sorted, 0, sorted.length));

@@ -48,6 +48,16 @@ var algJS;
             var remainder = p % q;
             return Mathematics.EuclideansAlgorithm(q, remainder);
         }
+        Mathematics.StirlingsApproximation = function (n, val) {
+            if(n == 0) {
+                return val;
+            }
+
+            return Mathematics.StirlingsApproximation(n-1, val + Math.log(n));
+        }
+        Mathematics.OtherStirling = function (n) {
+            return Math.sqrt((Math.PI * 2) * n) * Math.exp((n / Math.E), n);
+        }
         return Mathematics;
     }());
     algJS.Mathematics = Mathematics;
@@ -107,3 +117,6 @@ var algJS;
     }());
     algJS.Sort = Sort;
 })(algJS || (algJS = {}));
+
+console.log(algJS.Mathematics.StirlingsApproximation(10, 0));
+console.log(algJS.Mathematics.OtherStirling(10));

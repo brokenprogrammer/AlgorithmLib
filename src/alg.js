@@ -41,30 +41,48 @@ var algJS;
     var Mathematics = (function () {
         function Mathematics () {
         }
-        Mathematics.LogarithmicFactorial = function (n, val) {
+        Mathematics.Add = function(a, b) {
+            return a + b;
+        }
+        Mathematics.Sub = function(a, b) {
+            return a - b;
+        }
+        Mathematics.Divide = function(a, b) {
+            return a / b;
+        }
+        Mathematics.Multiply = function(a, b) {
+            return a * b;
+        }
+        Mathematics.Factorial = function(n) {
+            if (n == 0) {
+                return 1;
+            }
+            return n * Mathematics.Factorial(n-1);
+        }
+        Mathematics.LogarithmicFactorial = function(n, val) {
             if(n == 0) {
                 return val;
             }
 
             return Mathematics.LogarithmicFactorial(n-1, val + Math.log(n));
         }
-        Mathematics.EuclideansAlgorithm = function (p, q) {
+        Mathematics.EuclideansAlgorithm = function(p, q) {
             if (q == 0) {
                 return p;
             }
             var remainder = p % q;
             return Mathematics.EuclideansAlgorithm(q, remainder);
         }
-        Mathematics.StirlingsApproximation = function (n) {
+        Mathematics.StirlingsApproximation = function(n) {
             return Math.sqrt((2 * Math.PI) * n) * Math.pow((n / Math.E), n);
         }
         return Mathematics;
     }());
     algJS.Mathematics = Mathematics;
-    var Search = (function () {
-        function Search () {
+    var Search = (function() {
+        function Search() {
         }
-        Search.BinarySearch = function (key, array) {
+        Search.BinarySearch = function(key, array) {
             var lo = 0;
             var hi = array.length-1;
             var mid;
@@ -86,10 +104,10 @@ var algJS;
         return Search;
     }());
     algJS.Search = Search;
-    var Sort = (function () {
+    var Sort = (function() {
         function Sort() {
         }
-        Sort.BubbleSort = function (value) {
+        Sort.BubbleSort = function(value) {
             if (typeof value != 'object') {
                 throw new TypeError('Value is not an array that can be sorted.');
             }
@@ -110,7 +128,7 @@ var algJS;
             }
             return value;
         }
-        Sort.QuickSortLomuto = function (value) {
+        Sort.QuickSortLomuto = function(value) {
             return value;
         }
         return Sort;

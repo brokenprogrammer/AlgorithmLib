@@ -51,6 +51,30 @@ function Sub(a, b) {
 }
 
 /**
+ * Divide is a function that uses division to return the quotient of two numbers.
+ *
+ * @param a - first number to use in the division.
+ * @param b - second number to use in the division.
+ *
+ * @return The quotient of a and b.
+ */
+function Divide(a, b) {
+    return a / b;
+}
+
+/**
+ * Multiply is a function that uses multiplication to return the product of two numbers.
+ *
+ * @param a - first number to use in the multiplication.
+ * @param b - second number to use in the multiplication.
+ *
+ * @return The product of a and b.
+ */
+function Multiply(a, b) {
+    return a * b;
+}
+
+/**
  * Factorial is a function that returns the factorial of given number in the
  * parameters. Factorial is the product of all integers from 1 to n.
  * Example: n! = 1 * 2 * 3 * ... * n
@@ -86,7 +110,9 @@ function FactorialRecursive(n) {
     return n * FactorialRecursive(n-1);
 }
 
-console.log(Add(5, 5));
-console.log(Sub(8, 3));
-console.log(Factorial(5));
-console.log(FactorialRecursive(5));
+console.log('5 + 5 = ' + Add(5, 5));
+console.log('8 - 3 = ' + Sub(8, 3));
+console.log('10 / 2 = ' + Divide(10, 2));
+console.log('10 * 10 = ' + Multiply(10, 10));
+console.log('5! = ' + Factorial(5));
+console.log('5! = ' + FactorialRecursive(5));

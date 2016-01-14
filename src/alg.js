@@ -42,24 +42,42 @@ var algJS;
         function Mathematics () {
         }
         Mathematics.Add = function(a, b) {
+            if (typeof a != 'number' || typeof b != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             return a + b;
         }
         Mathematics.Sub = function(a, b) {
+            if (typeof a != 'number' || typeof b != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             return a - b;
         }
         Mathematics.Divide = function(a, b) {
+            if (typeof a != 'number' || typeof b != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             return a / b;
         }
         Mathematics.Multiply = function(a, b) {
+            if (typeof a != 'number' || typeof b != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             return a * b;
         }
         Mathematics.Factorial = function(n) {
+            if (typeof n != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number.');
+            }
             if (n == 0) {
                 return 1;
             }
             return n * Mathematics.Factorial(n-1);
         }
         Mathematics.LogarithmicFactorial = function(n, val) {
+            if (typeof n != 'number' || typeof val != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             if(n == 0) {
                 return val;
             }
@@ -67,6 +85,9 @@ var algJS;
             return Mathematics.LogarithmicFactorial(n-1, val + Math.log(n));
         }
         Mathematics.EuclideansAlgorithm = function(p, q) {
+            if (typeof p != 'number' || typeof q != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             if (q == 0) {
                 return p;
             }
@@ -74,6 +95,9 @@ var algJS;
             return Mathematics.EuclideansAlgorithm(q, remainder);
         }
         Mathematics.StirlingsApproximation = function(n) {
+            if (typeof n != 'number') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Number.');
+            }
             return Math.sqrt((2 * Math.PI) * n) * Math.pow((n / Math.E), n);
         }
         return Mathematics;

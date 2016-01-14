@@ -83,6 +83,9 @@ var algJS;
         function Search() {
         }
         Search.BinarySearch = function(key, array) {
+            if (typeof key != 'number' || typeof array != 'object') {
+                throw new TypeError('Invalid type in parameters, Expected Number, Array.');
+            }
             var lo = 0;
             var hi = array.length-1;
             var mid;

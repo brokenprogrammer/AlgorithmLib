@@ -134,6 +134,15 @@ var algJS;
     var Sort = (function() {
         function Sort() {
         }
+        Sort.Check = function (value) {
+            for (var x = 0; x < value.length; x++) {
+                if (value[x] > value[x+1]) {
+                    return false;
+                }
+            }
+
+            return true;
+        }
         Sort.BubbleSort = function(value) {
             if (typeof value != 'object') {
                 throw new TypeError('Value is not an array that can be sorted.');
@@ -187,12 +196,21 @@ var algJS;
                 }
             }
 
-            return value;
+            var first = value.slice(0, lastIndex);
+            var back = value.slice(lastIndex, value.length-1);
+
+            first = Sort.QuickSortLomuto(first);
+            back = Sort.QuickSortLomuto(back);
+
+            var value2 = first.concat(back);
+
+            return value2;
         }
         return Sort;
     }());
     algJS.Sort = Sort;
 })(algJS || (algJS = {}));
-
+var sorted = [1, 2, 3, 4, 5, 6, 7, 8];
 var sorting = [3, 7, 8, 5, 2, 1, 9, 5, 4];
-console.log(algJS.Sort.QuickSortLomuto(sorting));
+//console.log(algJS.Sort.QuickSortLomuto(sorting));
+console.log(algJS.Sort.Check(sorted));

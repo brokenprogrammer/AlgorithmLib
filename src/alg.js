@@ -164,47 +164,8 @@ var algJS;
             }
             return value;
         }
-        Sort.QuickSortLomuto = function(value) {
-            var last = value[value.length-1];
-            var lastIndex = value.length-1;
-            var currentLow = 1;
-            var lowMeet;
-            var right = true;
+        Sort.QuickSortLomuto = function(value, lo, hi) {
 
-            while (right) {
-                right = false;
-
-                if (value[lastIndex] > value[lastIndex-1] && value[lastIndex-1] != lowMeet) {
-                    var tmp = value[currentLow];
-                    value[currentLow] = value[lastIndex-1];
-                    value[lastIndex-1] = tmp;
-
-                    if (currentLow == 2) {
-                        lowMeet = value[currentLow];
-                    }
-
-                    currentLow += 1;
-                    right = true;
-                }
-
-                if (value[lastIndex] <= value[lastIndex-1]) {
-                    value[lastIndex] = value[lastIndex-1];
-                    value[lastIndex-1] = last;
-                    lastIndex -= 1;
-                    right = true;
-                    console.log(value); 
-                }
-            }
-
-            var first = value.slice(0, lastIndex);
-            var back = value.slice(lastIndex, value.length-1);
-
-            first = Sort.QuickSortLomuto(first);
-            back = Sort.QuickSortLomuto(back);
-
-            var value2 = first.concat(back);
-
-            return value2;
         }
         return Sort;
     }());
@@ -212,5 +173,5 @@ var algJS;
 })(algJS || (algJS = {}));
 var sorted = [1, 2, 3, 4, 5, 6, 7, 8];
 var sorting = [3, 7, 8, 5, 2, 1, 9, 5, 4];
-//console.log(algJS.Sort.QuickSortLomuto(sorting));
-console.log(algJS.Sort.Check(sorted));
+console.log(algJS.Sort.QuickSortLomuto(sorting));
+//console.log(algJS.Sort.Check(sorted));

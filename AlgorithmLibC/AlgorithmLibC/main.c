@@ -30,6 +30,13 @@
 
 int main(int argc, const char * argv[]) {
     // insert code here...
-    printf("Hello, World!\n");
+    int sum;
+    
+    sum = 50 + 25;
+    
+    printf("Programming is fun!\n");
+    printf("And programming in C is even more fun!\n");
+    
+    printf("The sum of 50 and 25 is: %i\n", sum);
     return 0;
 }

@@ -28,12 +28,18 @@
 
 #include "BubbleSort.h"
 
+/**
+ * BubbleSort sorts an array by repeatedly looping through an array by stepping
+ * through each value comparing the adjacent values and swaps the values if they
+ * are in wrong order. This keeps looping through untill no swaps is made and then
+ * the sorting is complete. Its called bubble sort because its bubbling the values
+ * up the array.
+ *
+ * @param values - An array of integers to be sorted.
+ * @param size - size of the array
+ * @return a sorted array.
+ */
 void BubbleSort(int values[], int size) {
-    printf("In BubbleSort\n");
-    for (int x = 0; x < size; x++) {
-        printf("%i, ", values[x]);
-    }
-    
     _Bool redo = 1;
     int switchTemp;
     
@@ -48,19 +54,22 @@ void BubbleSort(int values[], int size) {
             }
         }
     }
-    
-    printf("Sorted with BubbleSort\n");
-    for (int x = 0; x < size; x++) {
-        printf("%i, ", values[x]);
-    }
 }
 
+/**
+ * BubbleSort sorts an array by repeatedly looping through an array by stepping
+ * through each value comparing the adjacent values and swaps the values if they
+ * are in wrong order. This keeps looping through untill no swaps is made and then
+ * the sorting is complete. Its called bubble sort because its bubbling the values
+ * up the array.
+ *
+ * This version of the bubble sort is sorting the array from Highest to Lowest.
+ *
+ * @param values - An array of integers to be sorted.
+ * @param size - size of the array
+ * @return a sorted array.
+ */
 void BubbleSortHiLo(int values[], int size) {
-    printf("\nIn BubbleSort High to Low\n");
-    for (int x = 0; x < size; x++) {
-        printf("%i, ", values[x]);
-    }
-    
     _Bool redo = 1;
     int switchTemp;
     
@@ -74,10 +83,5 @@ void BubbleSortHiLo(int values[], int size) {
                 values[y] = switchTemp;
             }
         }
-    }
-    
-    printf("\nSorted with BubbleSort\n");
-    for (int x = 0; x < size; x++) {
-        printf("%i, ", values[x]);
     }
 }

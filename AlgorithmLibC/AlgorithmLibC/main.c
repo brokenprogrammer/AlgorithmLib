@@ -46,5 +46,10 @@ int main(int argc, const char * argv[]) {
     
     BubbleSort(values, valuesSize);
     BubbleSortHiLo(values, valuesSize);
+    
+    for (int x = 0; x < valuesSize; x++) {
+        printf("%i, ", values[x]);
+    }
+    
     return 0;
 }

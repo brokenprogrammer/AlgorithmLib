@@ -1,9 +1,83 @@
-//
-//  BubbleSort.c
-//  AlgorithmLibC
-//
-//  Created by Oskar Mendel on 1/31/16.
-//  Copyright © 2016 Oskar Mendel. All rights reserved.
-//
+/**
+ * AlgorithmLib.
+ * The library to provide solutions for tasks like sorting,
+ * searching and math algorithms.
+ *
+ * The MIT License (MIT)
+ *
+ * Copyright (c) 2016 The alg.js Project
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ */
 
 #include "BubbleSort.h"
+
+void BubbleSort(int values[], int size) {
+    printf("In BubbleSort\n");
+    for (int x = 0; x < size; x++) {
+        printf("%i, ", values[x]);
+    }
+    
+    _Bool redo = 1;
+    int switchTemp;
+    
+    for (int x = size; redo; x--) {
+        redo = 0;
+        for (int y = 0; y <= x; y++) {
+            if (values[y] > values[y+1]) {
+                redo = 1;
+                switchTemp = values[y+1];
+                values[y+1] = values[y];
+                values[y] = switchTemp;
+            }
+        }
+    }
+    
+    printf("Sorted with BubbleSort\n");
+    for (int x = 0; x < size; x++) {
+        printf("%i, ", values[x]);
+    }
+}
+
+void BubbleSortHiLo(int values[], int size) {
+    printf("\nIn BubbleSort High to Low\n");
+    for (int x = 0; x < size; x++) {
+        printf("%i, ", values[x]);
+    }
+    
+    _Bool redo = 1;
+    int switchTemp;
+    
+    for (int x = size; redo; x--) {
+        redo = 0;
+        for (int y = 0; y <= x; y++) {
+            if (values[y] > values[y-1]) {
+                redo = 1;
+                switchTemp = values[y-1];
+                values[y-1] = values[y];
+                values[y] = switchTemp;
+            }
+        }
+    }
+    
+    printf("\nSorted with BubbleSort\n");
+    for (int x = 0; x < size; x++) {
+        printf("%i, ", values[x]);
+    }
+}

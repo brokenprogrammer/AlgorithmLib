@@ -1,4 +1,4 @@
-/*
+/**
  * AlgorithmLib.
  * The library to provide solutions for tasks like sorting,
  * searching and math algorithms.
@@ -27,6 +27,7 @@
  */
 
 #include <stdio.h>
+#include "BubbleSort.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -38,5 +39,12 @@ int main(int argc, const char * argv[]) {
     printf("And programming in C is even more fun!\n");
     
     printf("The sum of 50 and 25 is: %i\n", sum);
+    
+    int values[] = {6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9};
+    int valuesSize = sizeof (values) / sizeof (int);
+    printf("Values Length: %lu \n", sizeof (values) / sizeof (int));
+    
+    BubbleSort(values, valuesSize);
+    BubbleSortHiLo(values, valuesSize);
     return 0;
 }

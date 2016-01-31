@@ -26,33 +26,27 @@
  * THE SOFTWARE.
  */
 
-#include <stdio.h>
-#include "BubbleSort.h"
 #include "EuclideansAlgorithm.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    int sum;
-    
-    sum = 50 + 25;
-    
-    printf("Programming is fun!\n");
-    printf("And programming in C is even more fun!\n");
-    
-    printf("The sum of 50 and 25 is: %i\n", sum);
-    
-    int values[] = {6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9};
-    int valuesSize = sizeof (values) / sizeof (int);
-    printf("Values Length: %lu \n", sizeof (values) / sizeof (int));
-    
-    BubbleSort(values, valuesSize);
-    BubbleSortHiLo(values, valuesSize);
-    
-    for (int x = 0; x < valuesSize; x++) {
-        printf("%i, ", values[x]);
+
+/**
+ * Euclideans Algorithm is a way to find the greatest commong divisor.
+ * The implementation here is a recursive function that takes two values
+ * It checkas if the second value is 0 because thats the slot for the remainder
+ * when the function does a recursive call.
+ * The function then goes on getting the remainder of value1 / value2 and 
+ * recursivley loops untill it finds the greatest common divisor.
+ *
+ * @param value1 - The first value to be compared with.
+ * @param value2 - The second value to be compared with, will also hold the 
+ * remainder in future loops.
+ * @returns the greatest common divisor of value1 & value2.
+ */
+int EuclideansAlgorithm(int value1, int value2) {
+    if (value2 == 0) {
+        return value1;
     }
+    int remainder = value1 % value2;
     
-    printf("Euclieands of: 252 & 105: %i\n", EuclideansAlgorithm(252, 105));
-    
-    return 0;
+    return EuclideansAlgorithm(value2, remainder);
 }

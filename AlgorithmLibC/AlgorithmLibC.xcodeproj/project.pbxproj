@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AB250EF31C5BA4830051EF90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB250EF21C5BA4830051EF90 /* main.c */; };
+		ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABADA2AC1C5D912B005311CC /* BubbleSort.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		AB250EEF1C5BA4830051EF90 /* AlgorithmLibC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmLibC; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB250EF21C5BA4830051EF90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		ABADA2AC1C5D912B005311CC /* BubbleSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BubbleSort.c; sourceTree = "<group>"; };
+		ABADA2AD1C5D912B005311CC /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				AB250EF21C5BA4830051EF90 /* main.c */,
+				ABADA2AC1C5D912B005311CC /* BubbleSort.c */,
+				ABADA2AD1C5D912B005311CC /* BubbleSort.h */,
 			);
 			path = AlgorithmLibC;
 			sourceTree = "<group>";
@@ -119,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB250EF31C5BA4830051EF90 /* main.c in Sources */,
+				ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +243,7 @@
 				AB250EF81C5BA4830051EF90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB250EF31C5BA4830051EF90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB250EF21C5BA4830051EF90 /* main.c */; };
 		ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABADA2AC1C5D912B005311CC /* BubbleSort.c */; };
+		ABB0118F1C5ED0E900F181E0 /* StirlingsApproximation.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */; };
 		ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,8 @@
 		AB250EF21C5BA4830051EF90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		ABADA2AC1C5D912B005311CC /* BubbleSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BubbleSort.c; sourceTree = "<group>"; };
 		ABADA2AD1C5D912B005311CC /* BubbleSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BubbleSort.h; sourceTree = "<group>"; };
+		ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = StirlingsApproximation.c; sourceTree = "<group>"; };
+		ABB0118E1C5ED0E900F181E0 /* StirlingsApproximation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StirlingsApproximation.h; sourceTree = "<group>"; };
 		ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EuclideansAlgorithm.c; sourceTree = "<group>"; };
 		ABB778581C5E465100159F0B /* EuclideansAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuclideansAlgorithm.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,6 +71,8 @@
 				ABADA2AD1C5D912B005311CC /* BubbleSort.h */,
 				ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */,
 				ABB778581C5E465100159F0B /* EuclideansAlgorithm.h */,
+				ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */,
+				ABB0118E1C5ED0E900F181E0 /* StirlingsApproximation.h */,
 			);
 			path = AlgorithmLibC;
 			sourceTree = "<group>";
@@ -131,6 +136,7 @@
 				ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */,
 				AB250EF31C5BA4830051EF90 /* main.c in Sources */,
 				ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */,
+				ABB0118F1C5ED0E900F181E0 /* StirlingsApproximation.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

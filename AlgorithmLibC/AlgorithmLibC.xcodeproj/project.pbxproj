@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */; };
 		AB250EF31C5BA4830051EF90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB250EF21C5BA4830051EF90 /* main.c */; };
 		ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABADA2AC1C5D912B005311CC /* BubbleSort.c */; };
 		ABB0118F1C5ED0E900F181E0 /* StirlingsApproximation.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */; };
@@ -26,6 +27,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BinarySearch.c; sourceTree = "<group>"; };
+		AB04E3EB1C5FD3DE00089D03 /* BinarySearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BinarySearch.h; sourceTree = "<group>"; };
 		AB250EEF1C5BA4830051EF90 /* AlgorithmLibC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmLibC; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB250EF21C5BA4830051EF90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		ABADA2AC1C5D912B005311CC /* BubbleSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = BubbleSort.c; sourceTree = "<group>"; };
@@ -73,6 +76,8 @@
 				ABB778581C5E465100159F0B /* EuclideansAlgorithm.h */,
 				ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */,
 				ABB0118E1C5ED0E900F181E0 /* StirlingsApproximation.h */,
+				AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */,
+				AB04E3EB1C5FD3DE00089D03 /* BinarySearch.h */,
 			);
 			path = AlgorithmLibC;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */,
 				ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */,
 				AB250EF31C5BA4830051EF90 /* main.c in Sources */,
 				ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */,

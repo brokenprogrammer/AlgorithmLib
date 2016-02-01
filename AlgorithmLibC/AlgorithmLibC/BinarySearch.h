@@ -31,6 +31,7 @@
 
 #include <stdio.h>
 
-int BinarySearch(int key, int array[], int min, int max);
+int BinarySearch(int key, int array[], int size);
+int BinarySearchHiLo(int key, int array[], int min, int max);
 
 #endif /* BinarySearch_h */

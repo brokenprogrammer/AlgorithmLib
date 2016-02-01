@@ -30,6 +30,7 @@
 #include "BubbleSort.h"
 #include "EuclideansAlgorithm.h"
 #include "StirlingsApproximation.h"
+#include "BinarySearch.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -49,13 +50,18 @@ int main(int argc, const char * argv[]) {
     BubbleSort(values, valuesSize);
     BubbleSortHiLo(values, valuesSize);
     
-    for (int x = 0; x < valuesSize; x++) {
-        printf("%i, ", values[x]);
-    }
-    
     printf("Euclieands of: 252 & 105: %i\n", EuclideansAlgorithm(252, 105));
     
     printf("Stirlings Approximitation of !1: %f\n", StirlingsApproximation(1));
     printf("Stirlings Approximitation of !1: %f\n", StirlingsApproximation(5));
+    
+    
+    BubbleSort(values, valuesSize);
+    for (int x = 0; x <= valuesSize; ++x) {
+        printf("%i, ", values[x]);
+    }
+    
+    printf("\nUsing BinarySearch the position of value 99 is: %i\n", BinarySearchHiLo(99, values, 0, valuesSize));
+    printf("Using BinarySearch the position of value 64 is: %i\n", BinarySearch(64, values, valuesSize));
     return 0;
 }

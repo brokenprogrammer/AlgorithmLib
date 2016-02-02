@@ -12,6 +12,7 @@
 		ABADA2AE1C5D912B005311CC /* BubbleSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABADA2AC1C5D912B005311CC /* BubbleSort.c */; };
 		ABB0118F1C5ED0E900F181E0 /* StirlingsApproximation.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */; };
 		ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */; };
+		ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABFCEB841C601FF800986F65 /* SelectionSort.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +38,8 @@
 		ABB0118E1C5ED0E900F181E0 /* StirlingsApproximation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StirlingsApproximation.h; sourceTree = "<group>"; };
 		ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = EuclideansAlgorithm.c; sourceTree = "<group>"; };
 		ABB778581C5E465100159F0B /* EuclideansAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuclideansAlgorithm.h; sourceTree = "<group>"; };
+		ABFCEB841C601FF800986F65 /* SelectionSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SelectionSort.c; sourceTree = "<group>"; };
+		ABFCEB851C601FF800986F65 /* SelectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				ABB0118E1C5ED0E900F181E0 /* StirlingsApproximation.h */,
 				AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */,
 				AB04E3EB1C5FD3DE00089D03 /* BinarySearch.h */,
+				ABFCEB841C601FF800986F65 /* SelectionSort.c */,
+				ABFCEB851C601FF800986F65 /* SelectionSort.h */,
 			);
 			path = AlgorithmLibC;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */,
 				AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */,
 				ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */,
 				AB250EF31C5BA4830051EF90 /* main.c in Sources */,

@@ -122,8 +122,21 @@ int peek(Stack **head) {
     return -1;
 }
 
-void deleteStack(Stack *head) {
-    
+/**
+ * deleteStack is a function that lets the caller delete their entire Stack
+ * structure by calling this function.
+ *
+ * @param **head - Pointer to the pointer of head, we use pointer to pointers to
+ * make it easier by letting us change the entire head Stack from this function.
+ */
+void deleteStack(Stack **head) {
+    Stack *newStack;
+    while (!isEmpty(*head)) {
+        newStack = (*head)->next;
+        free(*head);
+        *head = newStack;
+    }
+    free(*head);
 }
 
 /**

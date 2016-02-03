@@ -25,6 +25,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+#define STACK_MAX 30
 
 #ifndef Stack_h
 #define Stack_h
@@ -37,6 +38,11 @@ typedef struct Stack {
     struct Stack *next;
 }Stack;
 
+struct ArrayStruct {
+    int top;
+    int data[STACK_MAX];
+};
+
 Stack* initWithData(int val);
 
 void push(Stack **head, int val);
@@ -47,4 +53,11 @@ void deleteStack(Stack **head);
 int isEmpty(Stack *head);
 void display(Stack *head);
 
+struct ArrayStruct* initArrayStruct();
+void pushToArrayStruct(struct ArrayStruct *stack, int val);
+int popFromArrayStruct(struct ArrayStruct *stack);
+int peekAtArrayStruct(struct ArrayStruct *stack);
+
+void isEmptyArrayStruct(struct ArrayStruct *stack);
+void displayArrayStruct(struct ArrayStruct *stack);
 #endif /* Stack_h */

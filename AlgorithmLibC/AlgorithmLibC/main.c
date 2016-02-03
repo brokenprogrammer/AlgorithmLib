@@ -32,6 +32,7 @@
 #include "StirlingsApproximation.h"
 #include "BinarySearch.h"
 #include "SelectionSort.h"
+#include "Stack.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -71,5 +72,29 @@ int main(int argc, const char * argv[]) {
         printf("%i, ", selValues[x]);
     }
     
+    struct ArrayStruct *root = initArrayStruct();
+    
+    pushToArrayStruct(root, 5);
+    pushToArrayStruct(root, 10);
+    pushToArrayStruct(root, 15);
+    
+    displayArrayStruct(root);
+    
+    printf("Value removed from stack: %i\n", popFromArrayStruct(root));
+    printf("Value removed from stack: %i\n", popFromArrayStruct(root));
+    printf("Value removed from stack: %i\n", popFromArrayStruct(root));
+    printf("Value removed from stack: %i\n", popFromArrayStruct(root));
+    
+    displayArrayStruct(root);
+    
+    pushToArrayStruct(root, 15);
+    
+    printf("Value at the top of the stack: %i\n", peekAtArrayStruct(root));
+    
+    pushToArrayStruct(root, 643);
+    
+    printf("Value at the top of the stack: %i\n", peekAtArrayStruct(root));
+    
+    displayArrayStruct(root);
     return 0;
 }

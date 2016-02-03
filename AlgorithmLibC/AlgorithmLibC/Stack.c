@@ -169,3 +169,52 @@ void display(Stack *head) {
         current = current->next;
     }
 }
+
+/**
+ * initWithData initializes a new ArrayStruct by allocating a new pointer with
+ * the ammount of memory a Stack needs. Then after checking if the newly
+ * created stack is NULL or not its values are initialized by using the value
+ * from the parameters and setting the next Stack it points to to NULL.
+ *
+ * @returns pointer to the just initialized ArrayStruct.
+ */
+struct ArrayStruct* initArrayStruct() {
+    struct ArrayStruct *newStack =
+        (struct ArrayStruct*) malloc(sizeof(struct ArrayStruct));
+    
+    if(newStack == NULL) {
+        return NULL;
+    }
+    
+    newStack->top = -1;
+    return newStack;
+}
+
+void pushToArrayStruct(struct ArrayStruct *stack, int val) {
+    if (stack->top >= STACK_MAX-1) {
+        return;
+    }
+    stack->top = stack->top + 1;
+    stack->data[stack->top] = val;
+}
+
+int popFromArrayStruct(struct ArrayStruct *stack) {
+    if (stack->top < 0) {
+        return -1;
+    }
+    return stack->data[stack->top--];
+}
+
+int peekAtArrayStruct(struct ArrayStruct *stack) {
+    return stack->data[stack->top];
+}
+
+void isEmptyArrayStruct(struct ArrayStruct *stack) {
+    
+}
+
+void displayArrayStruct(struct ArrayStruct *stack) {
+    for (int x = 0; x <= stack->top; x++) {
+        printf("Stack Data: %i\n", stack->data[x]);
+    }
+}

@@ -32,17 +32,29 @@
 
 #include <stdio.h>
 
-typedef struct Stack {
-    int data;
-    int size;
-    struct Stack *next;
-}Stack;
+/**
+ * struct Stack Stack represents a Stack data structure
+ * using a linked list. The empty list is represented by
+ * a NULL pointer. To create a new Stack create a variable
+ * of this type containing a pointer to NULL.
+ */
+typedef struct Stack Stack;
 
-struct ArrayStruct {
-    int top;
-    int data[STACK_MAX];
-};
+/**
+ * struct ArrayStruct represents a Stack data structure
+ * using an array. The empty list is represented by
+ * an array with 30 elements. To create a new ArrayStack create a variable
+ * of this type containing a pointer to NULL.
+ */
+struct ArrayStruct;
 
+/**
+ * initialize a new linked list Stack by allocating the memory
+ * required and returning a pointer to the allocated Stack.
+ *
+ * @param val - The value to store in the first position of the stack.
+ * @returns a pointer to an allocated linked list based Stack.
+ */
 Stack* initWithData(int val);
 
 void push(Stack **head, int val);
@@ -55,6 +67,7 @@ void display(Stack *head);
 
 struct ArrayStruct* initArrayStruct();
 void pushToArrayStruct(struct ArrayStruct *stack, int val);
+void pushToArrayStructEnd(struct ArrayStruct *stack, int val);
 int popFromArrayStruct(struct ArrayStruct *stack);
 int peekAtArrayStruct(struct ArrayStruct *stack);
 

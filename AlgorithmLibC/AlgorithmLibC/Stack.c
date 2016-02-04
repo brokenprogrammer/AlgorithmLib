@@ -29,6 +29,20 @@
 #include "Stack.h"
 #include "stdlib.h"
 
+//Linked List based data structure.
+typedef struct Stack {
+    int data;
+    int size;
+    struct Stack *next;
+}Stack;
+
+//Array based stack data structure.
+struct ArrayStruct {
+    int top;
+    int data[STACK_MAX];
+};
+
+
 /**
  * initWithData initializes a new Stack by allocating a new pointer with
  * the ammount of memory a Stack needs. Then after checking if the newly
@@ -190,6 +204,15 @@ struct ArrayStruct* initArrayStruct() {
     return newStack;
 }
 
+/**
+ * pushToArrayStruct pushes a new integer value to the ArrayStruct provided in
+ * the parameters. It first checks that the stack is not overflowing the array
+ * size and if not proceeding with incrementing the top property and placing
+ * a new value into the data property at the current top.
+ *
+ * @param *stack - The target stack to push a value to.
+ * @param val - The target value to push into the array of the stack.
+ */
 void pushToArrayStruct(struct ArrayStruct *stack, int val) {
     if (stack->top >= STACK_MAX-1) {
         return;
@@ -198,6 +221,37 @@ void pushToArrayStruct(struct ArrayStruct *stack, int val) {
     stack->data[stack->top] = val;
 }
 
+/**
+ * pushToArrayStructEnd pushes a new integer value to the ArrayStruct provided
+ * in the parameters. It first checks that the stack is not overflowing
+ * the array size and if not proceeding with looping through the stacks entire
+ * data array moving each element up one position in the stack and then places
+ * the new value at the bottom of the stack at position 0.
+ *
+ * @param *stack - The target stack to push a value to.
+ * @param val - The target value to push into the array of the stack.
+ */
+void pushToArrayStructEnd(struct ArrayStruct *stack, int val) {
+    if (stack->top >= STACK_MAX-1) {
+        return;
+    }
+    
+    int x;
+    for (x = stack->top; x >= 0; x--) {
+        stack->data[x+1] = stack->data[x];
+    }
+    stack->top = stack->top + 1;
+    stack->data[0] = val;
+}
+
+/**
+ * popFromArrayStruct removes the value at the top position of the stacks array
+ * and reuturns it.
+ *
+ * @param *stack - The target stack to pop the top values from.
+ *
+ * @returns the value on the top of the stack. Returns -1 if the stack is empty.
+ */
 int popFromArrayStruct(struct ArrayStruct *stack) {
     if (stack->top < 0) {
         return -1;

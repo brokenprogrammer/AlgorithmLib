@@ -95,6 +95,8 @@ int main(int argc, const char * argv[]) {
     
     printf("Value at the top of the stack: %i\n", peekAtArrayStruct(root));
     
+    pushToArrayStruct(root, 55);
+    pushToArrayStructEnd(root, 10);
     displayArrayStruct(root);
     return 0;
 }

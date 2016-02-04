@@ -279,7 +279,10 @@ int peekAtArrayStruct(struct ArrayStack *stack) {
  * or not.
  */
 int isEmptyArrayStruct(struct ArrayStack *stack) {
-    
+    if (stack->top >= 1) {
+        return 1;
+    }
+    return 0;
 }
 
 /**

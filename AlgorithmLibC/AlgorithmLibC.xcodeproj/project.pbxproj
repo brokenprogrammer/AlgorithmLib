@@ -13,6 +13,7 @@
 		ABB0118F1C5ED0E900F181E0 /* StirlingsApproximation.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB0118D1C5ED0E900F181E0 /* StirlingsApproximation.c */; };
 		ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */; };
 		ABED4E811C621BD100FEAE9D /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = ABED4E7F1C621BD100FEAE9D /* Stack.c */; };
+		ABF0A0A91C63C52500EFE594 /* CaesarCipher.c in Sources */ = {isa = PBXBuildFile; fileRef = ABF0A0A71C63C52500EFE594 /* CaesarCipher.c */; };
 		ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABFCEB841C601FF800986F65 /* SelectionSort.c */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		ABB778581C5E465100159F0B /* EuclideansAlgorithm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EuclideansAlgorithm.h; sourceTree = "<group>"; };
 		ABED4E7F1C621BD100FEAE9D /* Stack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Stack.c; sourceTree = "<group>"; };
 		ABED4E801C621BD100FEAE9D /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
+		ABF0A0A71C63C52500EFE594 /* CaesarCipher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CaesarCipher.c; sourceTree = "<group>"; };
+		ABF0A0A81C63C52500EFE594 /* CaesarCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaesarCipher.h; sourceTree = "<group>"; };
 		ABFCEB841C601FF800986F65 /* SelectionSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SelectionSort.c; sourceTree = "<group>"; };
 		ABFCEB851C601FF800986F65 /* SelectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -75,6 +78,7 @@
 		AB250EF11C5BA4830051EF90 /* AlgorithmLibC */ = {
 			isa = PBXGroup;
 			children = (
+				ABF0A0A61C63C50300EFE594 /* Cryptography */,
 				ABED4E7D1C621B8C00FEAE9D /* Math */,
 				ABED4E7C1C621B7800FEAE9D /* Searching */,
 				ABED4E7B1C621B5400FEAE9D /* Sorting */,
@@ -122,6 +126,15 @@
 				ABED4E801C621BD100FEAE9D /* Stack.h */,
 			);
 			name = Structures;
+			sourceTree = "<group>";
+		};
+		ABF0A0A61C63C50300EFE594 /* Cryptography */ = {
+			isa = PBXGroup;
+			children = (
+				ABF0A0A71C63C52500EFE594 /* CaesarCipher.c */,
+				ABF0A0A81C63C52500EFE594 /* CaesarCipher.h */,
+			);
+			name = Cryptography;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */,
+				ABF0A0A91C63C52500EFE594 /* CaesarCipher.c in Sources */,
 				AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */,
 				ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */,
 				AB250EF31C5BA4830051EF90 /* main.c in Sources */,

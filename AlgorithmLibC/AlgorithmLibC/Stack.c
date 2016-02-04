@@ -37,7 +37,7 @@ typedef struct Stack {
 }Stack;
 
 //Array based stack data structure.
-struct ArrayStruct {
+struct ArrayStack {
     int top;
     int data[STACK_MAX];
 };
@@ -192,9 +192,9 @@ void display(Stack *head) {
  *
  * @returns pointer to the just initialized ArrayStruct.
  */
-struct ArrayStruct* initArrayStruct() {
-    struct ArrayStruct *newStack =
-        (struct ArrayStruct*) malloc(sizeof(struct ArrayStruct));
+struct ArrayStack* initArrayStruct() {
+    struct ArrayStack *newStack =
+        (struct ArrayStack*) malloc(sizeof(struct ArrayStack));
     
     if(newStack == NULL) {
         return NULL;
@@ -213,7 +213,7 @@ struct ArrayStruct* initArrayStruct() {
  * @param *stack - The target stack to push a value to.
  * @param val - The target value to push into the array of the stack.
  */
-void pushToArrayStruct(struct ArrayStruct *stack, int val) {
+void pushToArrayStruct(struct ArrayStack *stack, int val) {
     if (stack->top >= STACK_MAX-1) {
         return;
     }
@@ -231,7 +231,7 @@ void pushToArrayStruct(struct ArrayStruct *stack, int val) {
  * @param *stack - The target stack to push a value to.
  * @param val - The target value to push into the array of the stack.
  */
-void pushToArrayStructEnd(struct ArrayStruct *stack, int val) {
+void pushToArrayStructEnd(struct ArrayStack *stack, int val) {
     if (stack->top >= STACK_MAX-1) {
         return;
     }
@@ -252,22 +252,43 @@ void pushToArrayStructEnd(struct ArrayStruct *stack, int val) {
  *
  * @returns the value on the top of the stack. Returns -1 if the stack is empty.
  */
-int popFromArrayStruct(struct ArrayStruct *stack) {
+int popFromArrayStruct(struct ArrayStack *stack) {
     if (stack->top < 0) {
         return -1;
     }
     return stack->data[stack->top--];
 }
 
-int peekAtArrayStruct(struct ArrayStruct *stack) {
+/**
+ * peekAtArrayStrut returns the top value of the array based stack
+ * without removing it from the stack.
+ *
+ * @param *stack - Pointer to the target stack to peek at.
+ * @returns the value located at the top of the stack.
+ */
+int peekAtArrayStruct(struct ArrayStack *stack) {
     return stack->data[stack->top];
 }
 
-void isEmptyArrayStruct(struct ArrayStruct *stack) {
+/**
+ * isEmptyArrayStruct checks if the array based stack is empty or not
+ * and returns a true of false value depending on if it is or not.
+ *
+ * @param *stack - Pointer to the target stack to check if empty.
+ * @return a true or false value depending on if the target stack is empty
+ * or not.
+ */
+int isEmptyArrayStruct(struct ArrayStack *stack) {
     
 }
 
-void displayArrayStruct(struct ArrayStruct *stack) {
+/**
+ * displayArrayStruct loops through the entire array based stack
+ * printing out all the values within the stack.
+ *
+ * @param *stack - Pointer to the target stack to display values from.
+ */
+void displayArrayStruct(struct ArrayStack *stack) {
     for (int x = 0; x <= stack->top; x++) {
         printf("Stack Data: %i\n", stack->data[x]);
     }

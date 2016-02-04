@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
         printf("%i, ", selValues[x]);
     }
     
-    struct ArrayStruct *root = initArrayStruct();
+    struct ArrayStack *root = initArrayStruct();
     
     pushToArrayStruct(root, 5);
     pushToArrayStruct(root, 10);

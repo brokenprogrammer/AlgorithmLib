@@ -14,6 +14,7 @@
 		ABB778591C5E465100159F0B /* EuclideansAlgorithm.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB778571C5E465100159F0B /* EuclideansAlgorithm.c */; };
 		ABED4E811C621BD100FEAE9D /* Stack.c in Sources */ = {isa = PBXBuildFile; fileRef = ABED4E7F1C621BD100FEAE9D /* Stack.c */; };
 		ABF0A0A91C63C52500EFE594 /* CaesarCipher.c in Sources */ = {isa = PBXBuildFile; fileRef = ABF0A0A71C63C52500EFE594 /* CaesarCipher.c */; };
+		ABF0A0AC1C63C5E500EFE594 /* Queue.c in Sources */ = {isa = PBXBuildFile; fileRef = ABF0A0AA1C63C5E500EFE594 /* Queue.c */; };
 		ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */ = {isa = PBXBuildFile; fileRef = ABFCEB841C601FF800986F65 /* SelectionSort.c */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		ABED4E801C621BD100FEAE9D /* Stack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stack.h; sourceTree = "<group>"; };
 		ABF0A0A71C63C52500EFE594 /* CaesarCipher.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CaesarCipher.c; sourceTree = "<group>"; };
 		ABF0A0A81C63C52500EFE594 /* CaesarCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CaesarCipher.h; sourceTree = "<group>"; };
+		ABF0A0AA1C63C5E500EFE594 /* Queue.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Queue.c; sourceTree = "<group>"; };
+		ABF0A0AB1C63C5E500EFE594 /* Queue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Queue.h; sourceTree = "<group>"; };
 		ABFCEB841C601FF800986F65 /* SelectionSort.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SelectionSort.c; sourceTree = "<group>"; };
 		ABFCEB851C601FF800986F65 /* SelectionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectionSort.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -124,6 +127,8 @@
 			children = (
 				ABED4E7F1C621BD100FEAE9D /* Stack.c */,
 				ABED4E801C621BD100FEAE9D /* Stack.h */,
+				ABF0A0AA1C63C5E500EFE594 /* Queue.c */,
+				ABF0A0AB1C63C5E500EFE594 /* Queue.h */,
 			);
 			name = Structures;
 			sourceTree = "<group>";
@@ -193,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF0A0AC1C63C5E500EFE594 /* Queue.c in Sources */,
 				ABFCEB861C601FF800986F65 /* SelectionSort.c in Sources */,
 				ABF0A0A91C63C52500EFE594 /* CaesarCipher.c in Sources */,
 				AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */,

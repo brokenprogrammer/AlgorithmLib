@@ -20,7 +20,7 @@ typedef struct Queue {
     int size;
 }Queue;
 
-Queue* initWithData() {
+Queue* initQueueWithData() {
     Queue *newQueue = (Queue*) malloc(sizeof(Queue));
     
     

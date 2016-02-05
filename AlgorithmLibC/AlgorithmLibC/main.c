@@ -32,7 +32,7 @@
 #include "StirlingsApproximation.h"
 #include "BinarySearch.h"
 #include "SelectionSort.h"
-#include "Stack.h"
+#include "ArrayStack.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...

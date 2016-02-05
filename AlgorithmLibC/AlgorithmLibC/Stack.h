@@ -41,21 +41,13 @@
 typedef struct Stack Stack;
 
 /**
- * struct ArrayStruct represents a Stack data structure
- * using an array. The empty list is represented by
- * an array with 30 elements. To create a new ArrayStack create a variable
- * of this type containing a pointer to NULL.
- */
-struct ArrayStack;
-
-/**
  * initialize a new linked list Stack by allocating the memory
  * required and returning a pointer to the allocated Stack.
  *
  * @param val - The value to store in the first position of the stack.
  * @returns a pointer to an allocated linked list based Stack.
  */
-Stack* initWithData(int val);
+Stack* initStackWithData(int val);
 
 /**
  * pushes a new value into the Stack
@@ -109,62 +101,4 @@ int isEmpty(Stack *head);
  */
 void display(Stack *head);
 
-/**
- * initializes new array based stack.
- *
- * @returns pointer to a newly allocated ArrayStack.
- */
-struct ArrayStack* initArrayStruct();
-
-/**
- * push a value to the array based stack.
- *
- * @param *stack - Pointer to the target stack to push to.
- * @param val - value to push into the stack.
- */
-void pushToArrayStruct(struct ArrayStack *stack, int val);
-
-/**
- * pushToArrayStructEnd pushes a value to the bottom of the stack.
- *
- * @param *stack - Pointer to the target stack to push to.
- * @param val - value to push into the stack.
- */
-void pushToArrayStructEnd(struct ArrayStack *stack, int val);
-
-/**
- * popFromArrayStruct pops the top value of the array based stack
- * and returns its value to the caller.
- *
- * @param *stack - Pointer to the target stack to pop from.
- * @returns value that was removed form the top of the stack.
- */
-int popFromArrayStruct(struct ArrayStack *stack);
-
-/**
- * peekAtArrayStrut returns the top value of the array based stack
- * without removing it from the stack.
- *
- * @param *stack - Pointer to the target stack to peek at.
- * @returns the value located at the top of the stack.
- */
-int peekAtArrayStruct(struct ArrayStack *stack);
-
-/**
- * isEmptyArrayStruct checks if the array based stack is empty or not
- * and returns a true of false value depending on if it is or not.
- *
- * @param *stack - Pointer to the target stack to check if empty.
- * @return a true or false value depending on if the target stack is empty
- * or not.
- */
-int isEmptyArrayStruct(struct ArrayStack *stack);
-
-/**
- * displayArrayStruct loops through the entire array based stack 
- * printing out all the values within the stack.
- *
- * @param *stack - Pointer to the target stack to display values from.
- */
-void displayArrayStruct(struct ArrayStack *stack);
 #endif /* Stack_h */

@@ -48,6 +48,52 @@ Queue* initQueueWithData(int val) {
     
     newQueue->first = newNode;
     newQueue->last = newNode;
+    newQueue->size = 0;
     
     return newQueue;
+}
+
+void enqueue(Queue **queue, int val) {
+    struct Node *oldLast = (*queue)->last;
+    struct Node *newNode = (struct Node*) malloc(sizeof(struct Node));
+    
+    newNode->data = val;
+    newNode->next = NULL;
+    
+    (*queue)->last = newNode;
+    
+    if (isEmptyQueue(*queue)) {
+        (*queue)->first = (*queue)->last;
+    } else {
+        oldLast->next = newNode;
+    }
+    
+    (*queue)->size++;
+}
+
+int dequeue(Queue **queue) {
+    struct Node *oldFirst = (*queue)->first;
+    int retval = -1;
+    if (!isEmptyQueue(*queue)) {
+        retval = oldFirst->data;
+        (*queue)->first = (*queue)->first->next;
+        free(oldFirst);
+        (*queue)->size--;
+    }
+    
+    if (isEmptyQueue(*queue)) {
+        (*queue)->last = NULL;
+    }
+    return retval;
+}
+
+int isEmptyQueue(Queue *queue) {
+    if (queue->first == NULL) {
+        return 1;
+    }
+    return 0;
+}
+
+int getQueueSize(Queue *queue){
+    return queue->size;
 }

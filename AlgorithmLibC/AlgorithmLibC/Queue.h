@@ -31,10 +31,14 @@
 
 #include <stdio.h>
 
+struct Node;
 typedef struct Queue Queue;
 
-struct ArrayQueue;
+Queue* initQueueWithData(int val);
 
+void enqueue(Queue **queue, int val);
+int dequeue(Queue **queue);
 
-
+int isEmptyQueue(Queue *queue);
+int getQueueSize(Queue *queue);
 #endif /* Queue_h */

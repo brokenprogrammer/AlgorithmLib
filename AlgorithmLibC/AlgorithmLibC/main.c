@@ -33,6 +33,7 @@
 #include "BinarySearch.h"
 #include "SelectionSort.h"
 #include "ArrayStack.h"
+#include "Queue.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -98,5 +99,31 @@ int main(int argc, const char * argv[]) {
     pushToArrayStruct(root, 55);
     pushToArrayStructEnd(root, 10);
     displayArrayStruct(root);
+    
+    
+    printf("Testing Queue\n");
+    
+    Queue *myQueue = initQueueWithData(5);
+    enqueue(&myQueue, 10);
+    
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    
+    enqueue(&myQueue, 10);
+    enqueue(&myQueue, 150);
+    enqueue(&myQueue, 106);
+    enqueue(&myQueue, 13450);
+    enqueue(&myQueue, 140);
+    enqueue(&myQueue, 156430);
+    
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Enqueud value: %i\n", dequeue(&myQueue));
+    
+    
     return 0;
 }

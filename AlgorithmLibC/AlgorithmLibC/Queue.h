@@ -38,7 +38,7 @@ Queue* initQueueWithData(int val);
 
 void enqueue(Queue **queue, int val);
 int dequeue(Queue **queue);
-
+int peekQueue(Queue *queue);
 int isEmptyQueue(Queue *queue);
 int getQueueSize(Queue *queue);
 #endif /* Queue_h */

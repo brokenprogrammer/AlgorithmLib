@@ -118,6 +118,7 @@ int main(int argc, const char * argv[]) {
     enqueue(&myQueue, 156430);
     
     printf("Enqueud value: %i\n", dequeue(&myQueue));
+    printf("Current top value: %i\n", peekQueue(myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));

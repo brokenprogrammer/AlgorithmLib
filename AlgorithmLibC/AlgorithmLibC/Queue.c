@@ -87,6 +87,16 @@ int dequeue(Queue **queue) {
     return retval;
 }
 
+int peekQueue(Queue *queue) {
+    struct Node *currentFirst;
+    if (!isEmptyQueue(queue)) {
+        currentFirst = queue->first;
+        return currentFirst->data;
+    }
+    
+    return -1;
+}
+
 int isEmptyQueue(Queue *queue) {
     if (queue->first == NULL) {
         return 1;

@@ -31,4 +31,6 @@
 
 #include <stdio.h>
 
+const char* caesarEncrypt(char string[], int size);
+
 #endif /* CaesarCipher_h */

@@ -34,6 +34,7 @@
 #include "SelectionSort.h"
 #include "ArrayStack.h"
 #include "Queue.h"
+#include "CaesarCipher.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -125,6 +126,8 @@ int main(int argc, const char * argv[]) {
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     
-    
+    char myString[] = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+    printf("Unencrypted: %s\n", myString);
+    printf("Encrypted: %s\n", caesarEncrypt(myString, 43));
     return 0;
 }

@@ -27,3 +27,26 @@
  */
 
 #include "CaesarCipher.h"
+
+const char* caesarEncrypt(char string[], int size) {
+    int x;
+    
+    for (x = 0; x < size; x++) {
+        if (string[x] != ' ') {
+            if (string[x] - 3 < 'A') {
+                int what = (string[x] - 'A');
+                what = 3 - what-1;
+                //printf("%i\n", what);
+                if (what > 0) {
+                    string[x] = 'Z' - what;
+                } else {
+                    string[x] = 'Z';
+                }
+            } else {
+                string[x] = string[x] - 3;
+            }
+        }
+    }
+    
+    return string;
+}

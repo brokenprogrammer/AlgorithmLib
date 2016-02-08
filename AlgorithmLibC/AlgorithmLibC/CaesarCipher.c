@@ -35,7 +35,7 @@ const char* caesarEncrypt(char string[], int size) {
         if (string[x] != ' ') {
             if (string[x] - 3 < 'A') {
                 int what = (string[x] - 'A');
-                what = 3 - what-1;
+                what = 2 - what;
                 //printf("%i\n", what);
                 if (what > 0) {
                     string[x] = 'Z' - what;

@@ -49,7 +49,7 @@ typedef struct Stack {
  * @returns pointer to the just initialized Stack structure(object).
  */
 Stack* initStackWithData(int val) {
-    Stack *newStack = (Stack *) malloc(sizeof(Stack));
+    Stack *newStack = malloc(sizeof(*newStack));
     
     if(newStack == NULL) {
         return NULL;
@@ -74,7 +74,11 @@ Stack* initStackWithData(int val) {
  * @param val - Value to place in the Stack structures data property.
  */
 void push(Stack **head, int val) {
-    Stack *newStack = (Stack *) malloc(sizeof(Stack));
+    Stack *newStack = malloc(sizeof(*newStack));
+    
+    if(newStack == NULL) {
+        return;
+    }
     
     newStack->data = val;
     newStack->next = *head;
@@ -154,12 +158,7 @@ void deleteStack(Stack **head) {
  * @returns 1 if the Stack is empty. Returns 0 if the Stack is not empty.
  */
 int isEmpty(Stack *head) {
-    
-    if (head == NULL) {
-        return 1;
-    }
-    
-    return 0;
+    return !head;
 }
 
 /**
@@ -169,10 +168,6 @@ int isEmpty(Stack *head) {
  * @param *head - The target Stack to loop through its linked elements.
  */
 void display(Stack *head) {
-    Stack *current = head;
-    
-    while (current != NULL) {
-        printf("Stack Data: %i, Stack Size: %i\n", current->data, current->size);
-        current = current->next;
-    }
+    for(; head; head = head->next)
+        printf("Stack Data: %i\n", head->data);
 }

@@ -35,6 +35,7 @@
 #include "ArrayStack.h"
 #include "Queue.h"
 #include "CaesarCipher.h"
+#include "Stack.h"
 
 int main(int argc, const char * argv[]) {
     // insert code here...
@@ -125,6 +126,11 @@ int main(int argc, const char * argv[]) {
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));
     printf("Enqueud value: %i\n", dequeue(&myQueue));
+    
+    Stack *myStack = 0;
+    push(&myStack, 5);
+    printf("TOP OF THE STACK: %i\n", peek(&myStack));
+    display(myStack);
     
     char myString[] = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
     printf("Unencrypted: %s\n", myString);

@@ -44,8 +44,7 @@ struct ArrayStack {
  * @returns pointer to the just initialized ArrayStruct.
  */
 struct ArrayStack* initArrayStruct() {
-    struct ArrayStack *newStack =
-    (struct ArrayStack*) malloc(sizeof(struct ArrayStack));
+    struct ArrayStack *newStack = malloc(sizeof(*newStack));
     
     if(newStack == NULL) {
         return NULL;
@@ -130,10 +129,7 @@ int peekAtArrayStruct(struct ArrayStack *stack) {
  * or not.
  */
 int isEmptyArrayStruct(struct ArrayStack *stack) {
-    if (stack->top >= 1) {
-        return 1;
-    }
-    return 0;
+    return stack->top >= 1;
 }
 
 /**

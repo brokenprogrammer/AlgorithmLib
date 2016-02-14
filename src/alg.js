@@ -171,7 +171,3 @@ var algJS;
     }());
     algJS.Sort = Sort;
 })(algJS || (algJS = {}));
-var sorted = [1, 2, 3, 4, 5, 6, 7, 8];
-var sorting = [3, 7, 8, 5, 2, 1, 9, 5, 4];
-console.log(algJS.Sort.QuickSortLomuto(sorting));
-//console.log(algJS.Sort.Check(sorted));

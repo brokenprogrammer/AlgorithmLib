@@ -132,9 +132,9 @@ int main(int argc, const char * argv[]) {
     printf("TOP OF THE STACK: %i\n", peek(&myStack));
     display(myStack);
     
-    //char myString[] = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
-    //printf("Unencrypted: %s\n", myString);
-    //printf("Encrypted: %s\n", caesarEncrypt(myString, 43));
+    char myString[] = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+    printf("Unencrypted: %s\n", myString);
+    printf("Encrypted: %s\n", caesarEncrypt(myString, 43));
     
     return 0;
 }

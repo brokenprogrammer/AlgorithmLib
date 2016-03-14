@@ -28,22 +28,74 @@
 
 #include "CaesarCipher.h"
 
+/**
+ * Caesars Cipher Encrypt
+ * This function is used to encrypt a string using Caesars Cipher. Information
+ * for this algorithm is taken from the wikipedia description of Caesars ciper.
+ * Though in wikipedia they use a solution with Modulus that calculates the 
+ * letter from that.
+ *
+ * @param string - String to be encrypted.
+ * @param size - Size of the string.
+ * @return a encrypted string.
+ */
 const char* caesarEncrypt(char string[], int size) {
     int x;
     
     for (x = 0; x < size; x++) {
-        if (string[x] != ' ') {
+        
+        if (string[x] >= 'A' && string[x] <= 'Z') {
             if (string[x] - 3 < 'A') {
-                int what = (string[x] - 'A');
-                what = 2 - what;
-                //printf("%i\n", what);
-                if (what > 0) {
-                    string[x] = 'Z' - what;
-                } else {
-                    string[x] = 'Z';
-                }
+                string[x] = string[x] - (3 - 1) - 'A' + 'Z';
             } else {
-                string[x] = string[x] - 3;
+                string[x] -= 3;
+            }
+            continue;
+        }
+        
+        if (string[x] >= 'a' && string[x] <= 'z') {
+            if (string[x] - 3 < 'a') {
+                string[x] = string[x] - (3 - 1) - 'a' + 'z';
+            } else {
+                string[x] -= 3;
+            }
+        }
+    }
+    
+    return string;
+}
+
+/**
+ * Caesars Cipher Decrypt
+ * This function is used to decrypt a string which has been decrypted using 
+ * Caesars cipher. This is doing what the Caesar encrypt function does backwards
+ * to get the real string out. I also instroduced a key that is the deciding 
+ * factor if the decryption is right or not.
+ *
+ * @param string - String to be decrypted.
+ * @param size - Size of the string.
+ * @param key - The key used to decrypt the string.
+ * @return a decrypted string.
+ */
+const char* caesarDecrypt(char string[], int size, int key) {
+    int x;
+    
+    for (x = 0; x < size; x++) {
+        if (string[x] != ' ') {
+            if (string[x] >= 'A' && string[x] <= 'Z') {
+                if (string[x] + key > 'Z') {
+                    int what = string[x] + (key - 1) - 'Z' + 'A';
+                    string[x] = what;
+                } else {
+                    string[x] += key;
+                }
+            } else if (string[x] >= 'a' && string[x] <= 'z') {
+                if (string[x] + key > 'z') {
+                    int what = string[x] + (key - 1) - 'z' + 'a';
+                    string[x] = what;
+                } else {
+                    string[x] += key;
+                }
             }
         }
     }

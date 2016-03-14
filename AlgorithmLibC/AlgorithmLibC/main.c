@@ -133,8 +133,13 @@ int main(int argc, const char * argv[]) {
     display(myStack);
     
     char myString[] = "THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG";
+    char myLowerString[] = "the quick brown fox jumps over the lazy dog";
     printf("Unencrypted: %s\n", myString);
     printf("Encrypted: %s\n", caesarEncrypt(myString, 43));
+    printf("Decrypted: %s\n", caesarDecrypt(myString, 43, 3));
+    printf("Unencrypted: %s\n", myLowerString);
+    printf("Encrypted: %s\n", caesarEncrypt(myLowerString, 43));
+    printf("Decrypted: %s\n", caesarDecrypt(myLowerString, 43, 3));
     
     return 0;
 }

@@ -32,6 +32,7 @@
 #include "StirlingsApproximation.h"
 #include "BinarySearch.h"
 #include "SelectionSort.h"
+#include "QuickSort.h"
 #include "ArrayStack.h"
 #include "Queue.h"
 #include "CaesarCipher.h"
@@ -141,5 +142,11 @@ int main(int argc, const char * argv[]) {
     printf("Encrypted: %s\n", caesarEncrypt(myLowerString, 43));
     printf("Decrypted: %s\n", caesarDecrypt(myLowerString, 43, 3));
     
+    
+    int sellValues[] = {6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9};
+    QuickSort(sellValues, 0, valuesSize);
+    for (int x = 0; x < valuesSize; ++x) {
+        printf("%i, ", sellValues[x]);
+    }
     return 0;
 }

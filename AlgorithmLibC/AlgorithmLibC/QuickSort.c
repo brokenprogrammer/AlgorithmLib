@@ -27,6 +27,7 @@
  */
 
 #include "QuickSort.h"
+void swap (int values[], int val1, int val2);
 
 /**
  * Quick Sort is one of the most used sorting algorithms out there. Many 
@@ -35,6 +36,7 @@
  * the middle of the array. and then using recursion sorts small pieces of 
  * the array at the time. Hoares partitioning starts from each ends of the
  * array and moves towards the middle.
+ * Read for explanation: mycstutorials.com/articles/sorting/quicksort
  *
  * @param array - The array to sort.
  * @param size - The size of the array to sort.
@@ -67,17 +69,30 @@ void QuickSort(int values[], int start, int size) {
             i++;
         }
         
+        /* If the left seek index is less than the right index swap them */
         if (j > i) {
-            int tempo = values[i];
-            values[i] = values[j];
-            values[j] = tempo;
+            swap(values, i, j);
         }
     }
     
-    int temp = values[start];
-    values[start] = values[j];
-    values[j] = temp;
+    /* After i and j have crossed swap the last element in the left partition
+    with the pivot. */
+    swap(values, start, j);
     
     QuickSort(values, start, i);
     QuickSort(values, i + 1, size);
+}
+
+/*
+ * Swap swaps two values in an array. Uses a temp variable then swaps the 
+ * values inside the two specified slots.
+ *
+ * @param values - Target array.
+ * @param val1 - Index of first value to swap.
+ * @param val2 - Index of second value to swap.
+ */
+void swap (int values[], int val1, int val2) {
+    int temp = values[val1];
+    values[val1] = values[val2];
+    values[val2] = temp;
 }

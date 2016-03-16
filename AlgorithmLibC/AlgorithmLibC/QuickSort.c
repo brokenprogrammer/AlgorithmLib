@@ -33,28 +33,36 @@
  * languages have it implemented in its standard libraries. This version is 
  * using Hoares partitioning scheme which means it starts the partitioning from
  * the middle of the array. and then using recursion sorts small pieces of 
- * the array at the time.
+ * the array at the time. Hoares partitioning starts from each ends of the
+ * array and moves towards the middle.
  *
  * @param array - The array to sort.
  * @param size - The size of the array to sort.
  */
 void QuickSort(int values[], int start, int size) {
-    
-    int switchTemp;
-    int i, last;
+    int i = start;
+    int j = size - 1;
+    int pivot = values[start];
     
     if (start >= size)
         return;
     
-    last = start;
-    
-    for (i = start+1; i <= size; i++) {
-        if (values[i] < values[start]) {
-            switchTemp = values[start];
-            values[start] = values[i];
-            values[i] = switchTemp;
+    while (i < j) {
+        while (i < j && values[j] >= pivot) {
+            j--;
         }
+        
+        values[i] = values[j];
+        
+        while (i < j && values[i] <= pivot) {
+            i++;
+        }
+        
+        values[j] = values[i];
     }
-    QuickSort(values, start, size-1);
-    QuickSort(values, start+1, size);
+    
+    values[i] = pivot;
+    
+    QuickSort(values, start, i);
+    QuickSort(values, i + 1, size);
 }

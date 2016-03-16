@@ -58,10 +58,6 @@ void QuickSort(int values[], int start, int size) {
             j--;
         }
         
-        printf("Before: %i \n", values[i]);
-        values[i] = values[j];
-        printf("After: %i \n", values[i]);
-        
         /*
          * If the current value value counting from the left is smaller than
          * the selected pivot then get the next element (continue searching)
@@ -71,10 +67,16 @@ void QuickSort(int values[], int start, int size) {
             i++;
         }
         
-        values[j] = values[i];
+        if (j > i) {
+            int tempo = values[i];
+            values[i] = values[j];
+            values[j] = tempo;
+        }
     }
     
-    values[i] = pivot;
+    int temp = values[start];
+    values[start] = values[j];
+    values[j] = temp;
     
     QuickSort(values, start, i);
     QuickSort(values, i + 1, size);

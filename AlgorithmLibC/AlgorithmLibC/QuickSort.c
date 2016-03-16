@@ -42,18 +42,31 @@
 void QuickSort(int values[], int start, int size) {
     int i = start;
     int j = size - 1;
+    //Decide what pivot element to use. We start from the first element.
     int pivot = values[start];
     
     if (start >= size)
         return;
     
     while (i < j) {
+        /*
+         * If the current value value counting from the right is greater than
+         * the selected pivot then get the next element (continue searching) 
+         * if the value is less than the pivot then stop.
+         */
         while (i < j && values[j] >= pivot) {
             j--;
         }
         
+        printf("Before: %i \n", values[i]);
         values[i] = values[j];
+        printf("After: %i \n", values[i]);
         
+        /*
+         * If the current value value counting from the left is smaller than
+         * the selected pivot then get the next element (continue searching)
+         * if the value is greater than the pivot then stop.
+         */
         while (i < j && values[i] <= pivot) {
             i++;
         }

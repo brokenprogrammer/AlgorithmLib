@@ -28,25 +28,37 @@
 
 #include "ShellSort.h"
 
-void ShellSort(int values[], int size) {
-    int n = size;
+/**
+ * Shell Sort is an extension of Insertion sort which allows comparison to
+ * elements which are far apart. How it works is that a gap is decided and it
+ * starts comparing all the elements that are gap number of elements apart from
+ * eachother. Beginning with a high gap number allows for numbers to be moved 
+ * long distances. In this implementation the gap is decided just by dividing 
+ * the size by 2 then dividing the decided gap by 2 each loop, there is other
+ * ways to implement how the gap is decided but i will keep this for simplicity.
+ *
+ * @param array - The array to sort.
+ * @param n - The size of the array to sort.
+ */
+void ShellSort(int values[], int n) {
     int h = 1; // Starting gap
     
-    //Increases the gap to the max fitting the size of this array
-    //1, 4, 13, 40, 121, 364, 1093...
-    //while (h < n/3) h = 3*h + 1;
-    
+    //Set the starting gap for the sort to be half the size of the array
     h = n / 2;
     
     while (h > 0) {
+        //Set the loop to start looking from the gap position in the array so
+        //it can compare to the elements that is gap number of positions behind
+        //the current element.
         for (int i = h; i < n; i++) {
             for (int j = i; j >= h && values[j] < values[j-h]; j-=n) {
-                //swap(values, j, j-h);
-                int temp = values[j];
+                //Swap the values with the j and the j - gap if j is higher than
+                // j-gap which is a lower index.
+                int t = values[j];
                 values[j] = values[j-h];
-                values[j-h] = temp;
+                values[j-h] = t;
             }
         }
-        h = h/2;
+        h /= 2;
     }
 }

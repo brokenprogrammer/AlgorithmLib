@@ -26,11 +26,4 @@
  * THE SOFTWARE.
  */
 
-#ifndef QuickSort_h
-#define QuickSort_h
-
-#include <stdio.h>
-
-void QuickSort(int values[], int start, int size);
-
-#endif /* QuickSort_h */
+#include "ShellSort.h"

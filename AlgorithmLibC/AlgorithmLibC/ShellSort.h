@@ -26,11 +26,11 @@
  * THE SOFTWARE.
  */
 
-#ifndef QuickSort_h
-#define QuickSort_h
+#ifndef ShellSort_h
+#define ShellSort_h
 
 #include <stdio.h>
 
-void QuickSort(int values[], int start, int size);
+void ShellSort();
 
-#endif /* QuickSort_h */
+#endif /* ShellSort_h */

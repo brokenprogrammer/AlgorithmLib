@@ -27,3 +27,26 @@
  */
 
 #include "ShellSort.h"
+
+void ShellSort(int values[], int size) {
+    int n = size;
+    int h = 1; // Starting gap
+    
+    //Increases the gap to the max fitting the size of this array
+    //1, 4, 13, 40, 121, 364, 1093...
+    //while (h < n/3) h = 3*h + 1;
+    
+    h = n / 2;
+    
+    while (h > 0) {
+        for (int i = h; i < n; i++) {
+            for (int j = i; j >= h && values[j] < values[j-h]; j-=n) {
+                //swap(values, j, j-h);
+                int temp = values[j];
+                values[j] = values[j-h];
+                values[j-h] = temp;
+            }
+        }
+        h = h/2;
+    }
+}

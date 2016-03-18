@@ -31,6 +31,6 @@
 
 #include <stdio.h>
 
-void QuickSort(int values[], int start, int n);
+void QuickSort(int values[], int start, int size);
 
 #endif /* QuickSort_h */

@@ -31,6 +31,6 @@
 
 #include <stdio.h>
 
-void ShellSort(int values[], int size);
+void ShellSort(int values[], int n);
 
 #endif /* ShellSort_h */

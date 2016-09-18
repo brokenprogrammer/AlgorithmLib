@@ -30,6 +30,7 @@
 #include "BubbleSort.h"
 #include "EuclideansAlgorithm.h"
 #include "StirlingsApproximation.h"
+#include "LinearSearch.h"
 #include "BinarySearch.h"
 #include "SelectionSort.h"
 #include "InsertionSort.h"
@@ -162,8 +163,10 @@ int main(int argc, const char * argv[]) {
     int sellllValues[] = {6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9};
     InsertionSort(sellllValues, valuesSize);
     for (int x = 0; x < valuesSize; ++x) {
-        printf("%i, ", selValues[x]);
+        printf("%i, ", sellllValues[x]);
     }
+    
+    LinearSearch(103, sellllValues, valuesSize);
     
     printf("\n");
     return 0;

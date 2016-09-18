@@ -26,32 +26,17 @@
  * THE SOFTWARE.
  */
 
-#include "InsertionSort.h"
+#include "LinearSearch.h"
 
-/**
- * Insertion Sort Insertion sort iterates, consuming one input element 
- * each repetition, and growing a sorted output list. Each iteration, 
- * insertion sort removes one element from the input data, finds the location 
- * it belongs within the sorted list, and inserts it there. It repeats until 
- * no input elements remain.
- *
- * @param array - The array to sort.
- * @param size - The size of the array to sort.
- */
-void InsertionSort(int array[], int size) {
-    for (int i = 1; i < size; i++)
-    {
-        int key = array[i];
-        int j = i-1;
-        
-        /* Move elements of arr[0..i-1], that are
-         greater than key, to one position ahead
-         of their current position */
-        while (j >= 0 && array[j] > key)
-        {
-            array[j+1] = array[j];
-            j = j-1;
+int LinearSearch(int key, int array[], int size) {
+    for (int x = 0; x <= size; x++) {
+        if (array[x] == key) {
+            printf("Element found at position: %i", x);
+            return x;
         }
-        array[j+1] = key;
     }
+    
+    printf("Element not found.\n");
+    
+    return 0;
 }

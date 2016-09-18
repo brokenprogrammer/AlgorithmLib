@@ -10,6 +10,7 @@
 		AB04E3EC1C5FD3DE00089D03 /* BinarySearch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */; };
 		AB1B007D1D8E155300146D71 /* InsertionSort.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1B007B1D8E155300146D71 /* InsertionSort.c */; };
 		AB250EF31C5BA4830051EF90 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB250EF21C5BA4830051EF90 /* main.c */; };
+		AB2A4E581D8F21C900FDF449 /* LinearSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = AB2A4E561D8F21C900FDF449 /* LinearSearch.c */; };
 		AB46E66A1C9EECCC0037A02A /* IPLookup.c in Sources */ = {isa = PBXBuildFile; fileRef = AB46E6681C9EECCC0037A02A /* IPLookup.c */; };
 		AB7661D11C64B9A10015E44B /* ArrayStack.c in Sources */ = {isa = PBXBuildFile; fileRef = AB7661CF1C64B9A10015E44B /* ArrayStack.c */; };
 		AB7691181C9887E100183960 /* QuickSort.c in Sources */ = {isa = PBXBuildFile; fileRef = AB7691161C9887E100183960 /* QuickSort.c */; };
@@ -43,6 +44,8 @@
 		AB1B007C1D8E155300146D71 /* InsertionSort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InsertionSort.h; sourceTree = "<group>"; };
 		AB250EEF1C5BA4830051EF90 /* AlgorithmLibC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AlgorithmLibC; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB250EF21C5BA4830051EF90 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		AB2A4E561D8F21C900FDF449 /* LinearSearch.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = LinearSearch.c; sourceTree = "<group>"; };
+		AB2A4E571D8F21C900FDF449 /* LinearSearch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LinearSearch.h; sourceTree = "<group>"; };
 		AB46E6681C9EECCC0037A02A /* IPLookup.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = IPLookup.c; sourceTree = "<group>"; };
 		AB46E6691C9EECCC0037A02A /* IPLookup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IPLookup.h; sourceTree = "<group>"; };
 		AB7661CF1C64B9A10015E44B /* ArrayStack.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ArrayStack.c; sourceTree = "<group>"; };
@@ -141,6 +144,8 @@
 			children = (
 				AB04E3EA1C5FD3DE00089D03 /* BinarySearch.c */,
 				AB04E3EB1C5FD3DE00089D03 /* BinarySearch.h */,
+				AB2A4E561D8F21C900FDF449 /* LinearSearch.c */,
+				AB2A4E571D8F21C900FDF449 /* LinearSearch.h */,
 			);
 			name = Searching;
 			sourceTree = "<group>";
@@ -236,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB2A4E581D8F21C900FDF449 /* LinearSearch.c in Sources */,
 				ABF4CD581C7B2B8F00938855 /* Bag.c in Sources */,
 				AB1B007D1D8E155300146D71 /* InsertionSort.c in Sources */,
 				AB7691181C9887E100183960 /* QuickSort.c in Sources */,

@@ -32,6 +32,7 @@
 #include "StirlingsApproximation.h"
 #include "BinarySearch.h"
 #include "SelectionSort.h"
+#include "InsertionSort.h"
 #include "QuickSort.h"
 #include "ShellSort.h"
 #include "ArrayStack.h"
@@ -154,6 +155,13 @@ int main(int argc, const char * argv[]) {
     ShellSort(selllValues, valuesSize);
     for (int x = 0; x < valuesSize; ++x) {
         printf("%i, ", selllValues[x]);
+    }
+    
+    printf("\nInsertion Sort: \n");
+    int sellllValues[] = {6, 4, 1, 2, 3, 5, 7, 10, 99, 64, 32, 22, 103, 74, 8, 9};
+    InsertionSort(sellllValues, valuesSize);
+    for (int x = 0; x < valuesSize; ++x) {
+        printf("%i, ", selValues[x]);
     }
     return 0;
 }

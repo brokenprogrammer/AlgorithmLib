@@ -45,13 +45,12 @@ void ShellSort(int values[], int n) {
     
     //Set the starting gap for the sort to be half the size of the array
     h = n / 2;
-    
     while (h > 0) {
         //Set the loop to start looking from the gap position in the array so
         //it can compare to the elements that is gap number of positions behind
         //the current element.
         for (int i = h; i < n; i++) {
-            for (int j = i; j >= h && values[j] < values[j-h]; j-=n) {
+            for (int j = i; j >= h && values[j] < values[j-h]; j-=h) {
                 //Swap the values with the j and the j - gap if j is higher than
                 // j-gap which is a lower index.
                 int t = values[j];

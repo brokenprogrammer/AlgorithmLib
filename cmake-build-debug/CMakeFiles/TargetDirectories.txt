@@ -1,3 +1,0 @@
-C:/Users/Oskar/Documents/GitHub/AlgorithmLib/cmake-build-debug/CMakeFiles/AlgorithmLib.dir
-C:/Users/Oskar/Documents/GitHub/AlgorithmLib/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Oskar/Documents/GitHub/AlgorithmLib/cmake-build-debug/CMakeFiles/rebuild_cache.dir

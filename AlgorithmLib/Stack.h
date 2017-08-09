@@ -2,8 +2,6 @@
 #define Stack_H
 #pragma once
 
-#include <iostream>
-
 template <typename T>
 class Stack
 {
